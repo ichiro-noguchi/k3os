@@ -1,0 +1,21 @@
+k3os:
+  ntp_servers:
+  - 0.jp.pool.ntp.org
+  - 1.jp.pool.ntp.org
+  - 2.jp.pool.ntp.org
+  - 3.jp.pool.ntp.org
+
+ssh_authorized_keys: 
+- ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDW0sWbCNzjHuROSkIXKwOa3jV4siPFLbqjqAk2ldijq6RyY3Nv2M+YH6mreH3zmHrIccMFv4uYd8NlLBArGKNoOzH2zx7m+5eumLVNXZIV6c761CqTwpMDRtJg6HQpaGr8bJZBq/S72C5QnJZtQnSfOPWD49wI07qn7aFGepwWrtBJzd9fCOr1oAlGHVB9W2sWXs5y3j2z+MsWL8wa8t1Bz1D6Lwrd9wic+7p6JhI7S7ZbulCLbjZW2z+gGxAFG6QUbiku2HdR9pvdcFBH/kbw8jB4IkWYyzFbnZ1IFHeBYTpCX2RWv5MbKLwT982D+thdy5ATYTkMaz7WYNjtDzzZ3PocP08iotZ/13RQ+5Nml1cvlHjkUvEWLl1CJw4MxCB8DgsEHwuPrKVqTUj3CNhYCiQL9EecDLuTqAJnsuaBZIJlS/In9JS70s7oLokbCUn3qq8UsTFOYJUHb3cWtfVLurfRvEYGiJ5MLcycEmfUXVuFYW/tZUTdBnYrgdPoe/c= tcs-one\a94a0017@NTTK-77-1207
+
+write_files:
+- path: /var/lib/connman/default.config
+  content: |-
+    [service_eth0]
+    Type=ethernet
+    IPv4=dhcp
+    IPv6=off
+    [service_eth1]
+    Type=ethernet
+    IPv4=192.168.56.21/24
+    IPv6=off
