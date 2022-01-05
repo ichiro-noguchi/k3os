@@ -10,18 +10,3 @@ k3os:
 ssh_authorized_keys: 
 - ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAgEAwOTHWUw5tYnl3Ttdolwvuzu/Iq5c0PysM2iBiA+fMFjBWd6fFuA/HEfJrnpjZZqCl2hXLvkalON91rnFjDGvCnpjXDvnofcvS4Hi9VoQpddw1WN7Llk2JjQADYfxmyHiLiAowJazCLyuWJjlJ0kdXkUKkZArbqLLxMTLJmMourC4y/eAoJ6xDcR0WrDEnFU9n4c44gHERWyVt2xTHBYRbHAjx3YWDHzsRW2fifGVn0IR0M96krmfzXgZS3ErGQvc8ZjN38+wuR8ZMKVPRDCHDpYW5KSaLtVVm5qsmK2ANnDsl8ugC1ULkNGzOHmK+QcNJtZixiPPp0TNLkBCZmT8d78xI6OOtrhFLe4nVWi9ARqfhP6Iw3vVnNPJax1emCP9U5/FU3hqdMrlu43pzb81hvOazH6EO5VDSOUv3YFggxRt76FDPNe/IX4kkyl7x7KIQHkmOHtJFlgw6+vBkfB8NyNGUWb0ZhCs7zNX5gKxCT/sorh2B7ORPvIynb9OGRUbXapRkL1T+N4yTVHJ5rMpKlW8gNDnkC/DKDNPgFU13WwnwIDM+SDkGiAuG0jWpbgzBe0pZ4SVfiPZ8P/ywkALk0XV7jKugOCGpcVC+fp12ikA9x5agggYjI4DPubQtbay+VY3U5wLzsLRIIyx7ZShPWp+8rOazAWsA1/nIuPZLYs= 
 
-write_files:
-- path: /var/lib/connman/default.config
-  content: |-
-    [service_eth0]
-    MAC=08:00:27:C5:BB:64
-    Name=eth0
-    Type=ethernet
-    IPv4=dhcp
-    IPv6=off
-    [service_eth1]
-    MAC=08:00:27:1A:8D:20
-    Name=eth1
-    Type=ethernet
-    IPv4=192.168.56.21/24
-    IPv6=off
